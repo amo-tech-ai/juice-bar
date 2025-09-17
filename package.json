@@ -1,0 +1,17 @@
+{
+  "name": "juice-bar-theme",
+  "version": "1.0.0",
+  "description": "Shopify theme for juice bar",
+  "scripts": {
+    "dev": "shopify theme dev",
+    "serve": "shopify theme dev --live-reload=hot-reload",
+    "check": "shopify theme check",
+    "pull": "shopify theme pull",
+    "push": "shopify theme push --unpublished",
+    "push:live": "shopify theme push --live"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amo-tech-ai/juice-bar.git"
+  }
+}
