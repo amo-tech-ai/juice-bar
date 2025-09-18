@@ -1,17 +1,39 @@
 {
-  "name": "juice-bar-theme",
+  "name": "juice-bar-shopify-theme",
   "version": "1.0.0",
-  "description": "Shopify theme for juice bar",
+  "description": "Shopify theme for healthfood-juicebar100.myshopify.com",
+  "main": "index.js",
   "scripts": {
-    "dev": "shopify theme dev",
-    "serve": "shopify theme dev --live-reload=hot-reload",
+    "dev": "shopify theme dev --store healthfood-juicebar100",
+    "dev:hot": "shopify theme dev --store healthfood-juicebar100 --live-reload hot-reload",
+    "pull": "shopify theme pull --live --store healthfood-juicebar100",
+    "push": "shopify theme push --development --store healthfood-juicebar100",
+    "push:live": "shopify theme push --live --store healthfood-juicebar100",
     "check": "shopify theme check",
-    "pull": "shopify theme pull",
-    "push": "shopify theme push --unpublished",
-    "push:live": "shopify theme push --live"
+    "list": "shopify theme list --store healthfood-juicebar100",
+    "info": "shopify theme info --store healthfood-juicebar100",
+    "share": "shopify theme share --store healthfood-juicebar100",
+    "sync": "npm run pull && git add . && git commit -m 'sync: update from Shopify' && git push origin main",
+    "deploy": "git pull origin main && npm run push:live"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/amo-tech-ai/juice-bar.git"
+    "url": "git+https://github.com/amo-tech-ai/juice-bar.git"
+  },
+  "keywords": [
+    "shopify",
+    "theme",
+    "ecommerce",
+    "juice-bar"
+  ],
+  "author": "AMO Tech AI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amo-tech-ai/juice-bar/issues"
+  },
+  "homepage": "https://github.com/amo-tech-ai/juice-bar#readme",
+  "devDependencies": {
+    "@shopify/cli": "^3.84.1",
+    "@shopify/theme": "^3.84.1"
   }
 }
